@@ -9,7 +9,7 @@
 </p>
 
 <p>
-  더 이상 팀원에게 따로 일일이 직접 연락을 하지 마세요!<br> Github Action을 활용하여 만든 Kakao Alarm Bot과 함께라면 실시간으로 작업내용을 팀원에게 알려줄 수 있습니다!
+  더 이상 팀원에게 따로 일일이 직접 연락 하지 마세요!<br> Github Action을 활용하여 만든 Kakao Alarm Bot과 함께라면 실시간으로 작업내용을 팀원에게 알려줄 수 있습니다!
 </p>
 </div>
 
@@ -73,9 +73,19 @@
 # <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> **축하합니다!** 이제 카카오 알림 봇을 사용할 일만 남았습니다!</div>
 
 - 여러분들은 알람 메시지를 커스터마이징해서 보낼 수 있습니다.
-1. `test-variable`은 단순히 action 진행중에 이름이라고 생각하시면 됩니다. (그냥 아무렇게 적으셔도 됩니다)
-2. `send-to-function`은 **나에게 보내기** `send_to_me` 또는 - **친구에게 보내기** `send_to_friends` 중 택 1하시면 됩니다.
-3. 
+1. (필수 ○) `send-to-function`은 **나에게 보내기** `send_to_me` 또는 - **친구에게 보내기** `send_to_friends` 중 택 1하시면 됩니다.
+2. (필수 ○) `repo-url`은 카카오톡 메시지 내의 버튼 및 이미지 클릭시 연결될 링크입니다.
+3. (필수 △) `access-token`은 1번에서 **나에게 보내기**를 선택한 경우 필수로 넣어주셔야 합니다. **토큰 받기** 단계의 3단계를 참고하세요.
+4. (필수 △) `refresh-token`은 1번에서 **친구에게 보내기**를 선택한 경우 필수로 넣어주셔야 합니다. **토큰 받기** 단계의 3단계를 참고하세요.
+5. (필수 X) `msg-template`은 피드(feed)형식인지(좌) 텍스트(text)형식인지(우) 골라서 넣어주시면 됩니다. 안 적을 시 'text' 형식으로 전송됩니다.
+6. (필수 X) `msg-img`는 피드로 설정할 경우 피드 이미지에 사용자가 원하는 이미지를 넣을 수 있습니다. 이미지 주소를 입력해주세요. (안 적을 시 "Octocat" 이미지가 들어갑니다)
+<div align="center">
+<p>
+  <img src="https://github.com/2020311920/gitAction_marketplace_test1/assets/80453145/135f36dd-f769-45f0-ba54-6760bd6c8bd8" style = "height: 300px;">
+  <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/ffbb93c4-be88-415c-889c-43bdb07b517c" style = "height: 100px;">
+</p>
+
+<div align="left">
 
 ```yml
 name: Example for show
@@ -96,14 +106,15 @@ jobs:
     - name: Run kakaoAlarmBot action
       uses: hyeonjeong-ko/packiging-test@5.7
       with:
-        test-variable: "your test name"
+        repo-url: "your repository url (link sent with the message) "
         send-to-function: "send_to_me" or "send_to_friends"
-        rest-api-key: "your rest api key" 
-        redirect-uri: "your redirect url(이미지 또는 버튼을 클릭할 때 넘어갈 url)"
-        code-key: "your Access Token"
-        msg-template: "text" or "feed"
+        access-token: "your kakaotalk access-token key (send_to_me)"
+        refresh-token: "your kakaotalk refresh-token key (send_to_friends)"
+        msg-template: "text" or "feed" ＊default: text"
+        msg-img: "Specifying an image for sending in feed format."
 ```
 
+# <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 사용예시</div>
 
 
 
