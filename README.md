@@ -2,7 +2,7 @@
 
 <div align="center">
 <p>
-  <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/6298b61c-bdc0-41ff-b961-c483361170ec" style = "height: 300px;">
+  <img src="https://github.com/2020311920/packiging-test/assets/80453145/520f6ca8-ce6d-4381-876e-be6994f805ab" style = "height: 300px;">
   <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/d24bf58c-7042-45d4-a281-55907835afb2" style = "height: 300px;">
   <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/ffbb93c4-be88-415c-889c-43bdb07b517c" style = "height: 100px;">
   <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/af5dda32-10f6-42cf-b303-1c9ac42b7229" style = "height: 100px;">
@@ -39,7 +39,7 @@
 > ![kakao_developer_login_statusON](https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/bcf327d4-5379-4327-8a31-5aa6e78c87c0)
 > ![kakao_developer_login_RedirectURL](https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/fb3f9d25-0670-4bfc-8fe3-1c21fd762e4c)
 
-6. 마지막 단계입니다. 현재 존재하는 "카카오 로그인"에서 하위 항목 중 "동의항목"에 들어가서 개인정보들 중 수집할 것을 설정합니다.<br>
+6. 마지막 단계입니다. 현재 위치하는 "카카오 로그인"에서 하위 항목 중 "동의항목"에 들어가서 개인정보들 중 수집할 것을 설정합니다.<br>
 > 동의 목적은 아무렇게나 써도 됩니다. ex) 개발목적
 
 | 항목이름                  	| 상태         	|
@@ -107,5 +107,5 @@ jobs:
 
 
 
-# 라이선스
+# 라이센스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참고하세요.
