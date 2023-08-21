@@ -1,8 +1,8 @@
-#Kakao Alarm Bot
+# Kakao Alarm Bot
 
-##Kakao Alarm Bot은 GitHub의 Pull Request와 Merge 관련 정보를 자동으로 카카오톡으로 알림을 보내주는 도구입니다. 더 이상 수동으로 카카오톡으로 리뷰를 요청하거나 알림을 보내지 마세요!
+## Kakao Alarm Bot은 GitHub의 Pull Request와 Merge 관련 정보를 자동으로 카카오톡으로 알림을 보내주는 도구입니다. 더 이상 수동으로 카카오톡으로 리뷰를 요청하거나 알림을 보내지 마세요!
 
-#사용 방법
+# 사용 방법
 
 - 이 저장소를 클론하거나 Fork합니다.
 - KakaoTalk API 토큰을 얻습니다.
