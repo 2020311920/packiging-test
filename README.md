@@ -13,7 +13,7 @@
 </p>
 </div>
 
-# <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> 사전 설정 - Kakao Developer</div>
+## <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> 사전 설정 - Kakao Developer</div>
 
 1. [Kakao Developers](https://developers.kakao.com/)에 들어가 내 애플리케이션에 들어간다.<br>
 > <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/9af6470a-cb3b-4870-afe5-46d633ebda96" style = "width: 700px;">
@@ -50,7 +50,7 @@
 
 ![kakao_developer_login_Agreement](https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/aa218215-c643-4616-8318-132fd1d09c02)
 
-# <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 토큰 받기</div>
+## <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 토큰 받기</div>
 
 1. REST API
 > <img src = "https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/366daa93-29e7-4948-b901-311a820ad0e9" style = "width: 700px;">
@@ -70,7 +70,7 @@
 > 마지막 단계입니다! Kakao developers에서 **카카오톡 메시지 API**를 통해서 ACCESS TOKEN 과 REFRESH_TOKEN 를 얻어내주세요.
 ![Access Refresh_Token](https://github.com/2020311920/packiging-test/assets/80453145/605732c5-5218-4b72-bc9c-abef5ab73300)
 
-# <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> **축하합니다!** 이제 카카오 알림 봇을 사용할 일만 남았습니다!</div>
+## <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> **축하합니다!** 이제 카카오 알림 봇을 사용할 일만 남았습니다!</div>
 
 - 여러분들은 알람 메시지를 커스터마이징해서 보낼 수 있습니다.
 1. (필수 ○) `send-to-function`은 **나에게 보내기** `send_to_me` 또는 - **친구에게 보내기** `send_to_friends` 중 택 1하시면 됩니다.
@@ -113,7 +113,7 @@ jobs:
         msg-img: "Specifying an image for sending in feed format."
 ```
 
-# <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 사용예시</div>
+## <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 사용예시</div>
 > 위의 커스터마이징을 제외한 부분들은 그대로 복사붙여넣기 해주시면 됩니다. 신경쓰지 말아주세요.
 
 ```yml
@@ -175,5 +175,5 @@ jobs:
         TO_BRANCH: $TO_BRANCH
 ```
 
-# 라이센스
+## 라이센스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참고하세요.
