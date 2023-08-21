@@ -55,8 +55,27 @@
 1. REST API
 > <img src = "https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/366daa93-29e7-4948-b901-311a820ad0e9" style = "width: 700px;">
 
-2. dfdf
-> `https://kauth.kakao.com/oauth/authorize?client_id={REST API 키}&redirect_uri=https://localhost:3000&response_type=code&scope=talk_message`
+2. CODE KEY
+> 아래의 주소를 크롬 **새 시크릿 탭**에서 실행합니다. ({REST API 키}에는 1번의 REST API로 대체합니다)
+`https://kauth.kakao.com/oauth/authorize?client_id={REST API 키}&redirect_uri=https://localhost:3000&response_type=code&scope=talk_message`
+
+> 들어가면 **카카오 로그인** 창이 뜰 것입니다. 로그인 하고, **모두 동의** 를 해주세요.
+> 그러면 약 10초 정도 후에 아래와 같은 창이 뜰 것입니다.<br>**오류 아닙니다. 정상이에요**
+![image](https://github.com/2020311920/packiging-test/assets/80453145/ec05f591-e563-4f7f-8017-ddc72acf43d6)
+> 여기서 주소의 `code=...` 부분이 바로 CODE KEY입니다.
+![CODE_KEY_URL](https://github.com/2020311920/packiging-test/assets/80453145/6c458bd2-c56d-45cd-af0b-91df8c646f8d)
+
+
+3. ACCESS TOKEN & REFRESH_TOKEN
+> 마지막 단계입니다! Kakao developers에서 **카카오톡 메시지 API**를 통해서 ACCESS TOKEN 과 REFRESH_TOKEN 를 얻어내주세요.
+![Access Refresh_Token](https://github.com/2020311920/packiging-test/assets/80453145/605732c5-5218-4b72-bc9c-abef5ab73300)
+
+# <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F4346785%2Fattach%2F6018d9cab34440c6bccec9dee83bbc57" style="height: 32px;"> **축하합니다!** 이제 카카오 알림 봇을 사용할 일만 남았습니다!</div>
+
+- 여러분들은 알람 메시지를 커스터마이징해서 보낼 수 있습니다.
+1. `test-variable`은 단순히 action 진행중에 이름이라고 생각하시면 됩니다. (그냥 아무렇게 적으셔도 됩니다)
+2. `send-to-function`은 **나에게 보내기** `send_to_me` 또는 - **친구에게 보내기** `send_to_friends` 중 택 1하시면 됩니다.
+3. 
 
 ```yml
 name: Example for show
@@ -74,7 +93,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Run hjk-test-v1 action
+    - name: Run kakaoAlarmBot action
       uses: hyeonjeong-ko/packiging-test@5.7
       with:
         test-variable: "your test name"
