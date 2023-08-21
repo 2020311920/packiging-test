@@ -1,24 +1,53 @@
-# Kakao Alarm Bot
+# <img src="https://play-lh.googleusercontent.com/Ob9Ys8yKMeyKzZvl3cB9JNSTui1lJwjSKD60IVYnlvU2DsahysGENJE-txiRIW9_72Vd" style="height: 32px;"> Kakao Alarm Bot</div>
 
-## Kakao Alarm Bot은 GitHub의 Pull Request와 Merge 관련 정보를 자동으로 카카오톡으로 알림을 보내주는 도구입니다.
-###  더 이상 수동으로 카카오톡으로 리뷰를 요청하거나 알림을 보내지 마세요!
+<div align="center">
+<p>
+<img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/6298b61c-bdc0-41ff-b961-c483361170ec" style = "height: 300px;">
+<img src="screenshots/feed_push.png" style = "height: 300px;">
+<img src="screenshots/text_pull_request.png" style = "height: 100px;">
+<img src="screenshots/text_push.png" style = "height: 100px;">
+</p>
+</div>
 
-# 사용 방법
+# 사전 설정
 
-- 이 저장소를 클론하거나 Fork합니다.
-- KakaoTalk API 토큰을 얻습니다.
-- 카카오 개발자 사이트에서 프로젝트를 생성하고 API 토큰을 발급받습니다.
-- 저장소 Settings > Secrets로 이동하여 아래와 같이 Secrets를 추가합니다:
-- KAKAO_API_TOKEN: 카카오톡 API 토큰 값을 추가합니다.
-- .github/workflows/kakao_alert.yml 파일을 업데이트하고 커스터마이즈합니다:
+- [Kakao Developers](https://developers.kakao.com/)에 들어가 애플리케이션을 만든다.
+<img src="https://developers.kakao.com/static/images/pc/txt_visual1.png" style = "width: 300px;">
 - 
-원하는 Pull Request 이벤트와 브랜치를 설정합니다.
-send_kakao_alert.js 파일을 열어 KakaoTalk 알림 보내는 스크립트를 수정할 수 있습니다:
-원하는 알림 형식이나 내용으로 커스터마이즈합니다.
-README 파일 업데이트:
-필요한 사용법과 예시 사진을 자세히 기술합니다.
-스크린샷 예시
-KakaoTalk 알림 예시
+
+
+카카오 디벨로퍼
+앱 만들기
+팀원 넣기
+rest api 코드를 사용자 입력 변수에 집어넣기
+
+
+```yml
+name: Example for show
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-hjk-test-v1:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Run hjk-test-v1 action
+      uses: hyeonjeong-ko/packiging-test@5.7
+      with:
+        test-variable: "your test name"
+        send-to-function: "send_to_me" or "send_to_friends"
+        rest-api-key: "your rest api key" 
+        redirect-uri: "your redirect url(이미지 또는 버튼을 클릭할 때 넘어갈 url)"
+        code-key: "your Access Token"
+        msg-template: "text" or "feed"
+```
 
 # 라이선스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참고하세요.
