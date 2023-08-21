@@ -84,8 +84,7 @@
   <img src="https://github.com/2020311920/gitAction_marketplace_test1/assets/80453145/135f36dd-f769-45f0-ba54-6760bd6c8bd8" style = "height: 300px;">
   <img src="https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/ffbb93c4-be88-415c-889c-43bdb07b517c" style = "height: 100px;">
 </p>
-
-<div align="left">
+</div>
 
 ```yml
 name: Example for show
@@ -115,8 +114,66 @@ jobs:
 ```
 
 # <img src="https://seeklogo.com/images/G/github-actions-logo-031704BDC6-seeklogo.com.png" style="height: 32px;"> 사용예시</div>
+> 위의 커스터마이징을 제외한 부분들은 그대로 복사붙여넣기 해주시면 됩니다. 신경쓰지 말아주세요.
 
+```yml
+name: My GitHub Action
 
+on:
+  push:
+    branches:
+      - main
+# pull_request:
+#   branches:
+#     - main
+
+jobs:
+  test_v1:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set User Information
+      if: github.event_name == 'push'
+      id: user_info_push
+      run: |
+        USER_NAME=$(git log -1 --pretty=format:'%an')
+        COMMIT_TIME=$(git log -1 --pretty=format:'%ci')
+        COMMIT_MESSAGE=$(git log -1 --pretty=format:'%s')
+        FROM_BRANCH=$(git symbolic-ref --short HEAD)  # Get the current branch name
+        TO_BRANCH=${GITHUB_REF#refs/heads/}  # Remove the "refs/heads/" prefix from GITHUB_REF
+        echo "USER_NAME=$USER_NAME" >> $GITHUB_ENV
+        echo "COMMIT_TIME=$COMMIT_TIME" >> $GITHUB_ENV
+        echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+        echo "FROM_BRANCH=$FROM_BRANCH" >> $GITHUB_ENV
+        echo "TO_BRANCH=$TO_BRANCH" >> $GITHUB_ENV
+        
+        if [ -f "profile.md" ]; then
+          EXISTING_CONTEXT=$(cat profile.md)
+        else
+          EXISTING_CONTEXT=""
+        fi
+      
+    - name: Run hjk-test-v1 action
+      uses: hyeonjeong-ko/packiging-test@7.9
+      with:
+        test-variable: "친구에게 보내기!"
+        send-to-function: "send_to_friends"
+        refresh-token: "{your_refresh_token}" #나에게 보내기는 access-token이 필수
+        msg-template: "feed"
+        repo-url: "https://github.com/hyeonjeong-ko/test-marketplace"
+
+        existing-context: $EXISTING_CONTEXT
+        event_name: ${{ github.event_name }}
+        MERGED_STATUS: ${{ github.event.pull_request.merged }}
+        USER_NAME: $USER_NAME
+        COMMIT_TIME: $COMMIT_TIME
+        COMMIT_MESSAGE: $COMMIT_MESSAGE
+        FROM_BRANCH: $FROM_BRANCH
+        TO_BRANCH: $TO_BRANCH
+```
 
 # 라이센스
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참고하세요.
