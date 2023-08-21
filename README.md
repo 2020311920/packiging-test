@@ -34,7 +34,8 @@
 
 5. 4와 마찬가지로 좌측의 "카카오 로그인"에서 "활성화를 시킨 이후, 아래에 "Redirect URL"에 "https://localhost:3000"을 추가해주세요<br>
 > Access Token을 받기 위한 절차입니다
-> 
+> ![kakao_developer_login_statusON](https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/bcf327d4-5379-4327-8a31-5aa6e78c87c0)
+> ![kakao_developer_login_RedirectURL](https://github.com/hyeonjeong-ko/skku-git-assignment-1/assets/80453145/fb3f9d25-0670-4bfc-8fe3-1c21fd762e4c)
 
 
 카카오 디벨로퍼
